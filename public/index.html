@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css rel=stylesheet><link href=https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/css/dataTables.bootstrap4.min.css rel=stylesheet>
+
+</head>
+<body>
+    <div class="centered-form">
+        <div class="centered-form__box">
+            <h1>Search</h1>
+            <form id="search-form" onsubmit="false">
+                <label>Tags</label>
+                <input id="tags" type="text" name="tags" id="tags" placeholder="Use',' for multiple tags" required>
+                <button id="find" type="submit">Find</button> 
+            </form>
+        </div>
+    </div>
+
+    <div id="result-box">
+        <div id="result">
+        </div>
+    </div>
+    <div id="result-box">
+        <div id="result">
+            <button id="loadMore" style="display:none;">Load More</button>
+        </div>
+    </div>
+</body>
+
+<script type="application/javascript" src='./js/script.js' ></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/jquery.dataTables.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/js/dataTables.bootstrap4.min.js></script>
+
+</html>
