@@ -7,18 +7,19 @@ async function doRequest(options, body) {
           
               res.on('data', function(chunk){
                   s += chunk;
+                  
               });
           
               res.on('end', function(){
                   var responseJson = JSON.parse(s);
                   var pages = []
-                console.log(responseJson[0].data.search.posts)
+                //console.log(responseJson[0].data.search.posts)
                   responseJson[0].data.search.posts.items.forEach(item => {
                       var tags = []
                       item.tags.forEach(tag => {
                           tags.push(tag.displayTitle)
                       })
-                      console.log(item)
+                      //console.log(item)
                       var date=new Date(item.firstPublishedAt)
                       var page = {
                           "Creator": item.creator.name,
@@ -31,6 +32,7 @@ async function doRequest(options, body) {
                   });
           
                   resolve(pages)
+                  console.log(pages)
               });
           })
           
@@ -39,6 +41,7 @@ async function doRequest(options, body) {
           })
           
           req.write(body)
+          
           req.end()
     })
 }

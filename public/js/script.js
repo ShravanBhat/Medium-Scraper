@@ -4,7 +4,8 @@ form.addEventListener('submit', handleForm);
 var page = 0
 
 function formTable(data, div) {
-    var html = '<table class="table table-hover table-striped table-bordered" id="posts">'
+    
+    var html = '<h3>Search Results for ""</h3><table class="table table-hover table-striped table-bordered" id="posts">'
     html += '<tr>'
 
     for(var key in data[0]){
@@ -41,9 +42,9 @@ function appendTable(data) {
             var newCell = newRow.insertCell()
             datapointElement = document.createTextNode(datapoint)
 
-            if(key === 'MediumURL') {
+            if(key === 'Medium URL') {
                 var linkElement = document.createElement('a');
-                var linkText = document.createTextNode("Post by: " + value['Author']);
+                var linkText = document.createTextNode("Post by: " + value['Creator']);
                 linkElement.appendChild(linkText);
                 linkElement.title = datapoint;
                 linkElement.href = datapoint;

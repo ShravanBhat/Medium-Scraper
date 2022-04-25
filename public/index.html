@@ -6,11 +6,12 @@
 <body>
     <div class="centered-form">
         <div class="centered-form__box">
-            <h1>Search</h1>
+            <h1 class="text-center">Medium Post Search</h1>
             <form id="search-form" onsubmit="false">
-                <label>Tags</label>
-                <input id="tags" type="text" name="tags" id="tags" placeholder="Use',' for multiple tags" required>
-                <button id="find" type="submit">Find</button> 
+                <div class="input-group mb-5 " style="padding:0% 25%">
+                <input id="tags" name="tags" type="text" class="form-control" placeholder="Cybersecurity" aria-label="Cybersecurity" aria-describedby="basic-addon2" required>
+                <button class="btn btn-outline-secondary" id="find" type="submit">Search</button>
+            </div>
             </form>
         </div>
     </div>
@@ -20,8 +21,8 @@
         </div>
     </div>
     <div id="result-box">
-        <div id="result">
-            <button id="loadMore" style="display:none;">Load More</button>
+        <div id="result" class="col text-center">
+            <button id="loadMore" class="btn btn-primary" style="display:none;">Load More</button>
         </div>
     </div>
 </body>
