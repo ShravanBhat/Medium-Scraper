@@ -5,7 +5,7 @@ var page = 0
 
 function formTable(data, div) {
     
-    var html = '<h3>Search Results for ""</h3><table class="table table-hover table-striped table-bordered" id="posts">'
+    var html = '<table class="table table-hover table-striped table-bordered" id="posts">'
     html += '<tr>'
 
     for(var key in data[0]){
